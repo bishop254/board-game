@@ -17,30 +17,34 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+No real tests have been implemented yet.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Introduction
+This react app is a game based on a player moving across a board while eating treats.
+It displays the steps taken after all treats are eaten.
+Typescript is the template used for creating the various components.
+Still in its early stages. has some minor errors.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Roadmap
+It has three main components:
+### UserInput
+Takes in user input used to define the width and height of our board.
+### Board 
+Houses our board and is called after UserInput components gets the measurements of our board.
+Listens for key presses and repositions the player accordingly.
+Deletes a treat from the board if player moves to the tile containing that treat.
+### Tile
+A tile can hold an image and is used to track movement of the player based on div ID.
+Tiles are rendered in a nested for loop that takes in the width and height input by the user.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Logic
+If the up arrow key is pressed then take the div ID of the div holding the player
+and decrement the row portion of the ID by one.
+The sme logic covers all other directions.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

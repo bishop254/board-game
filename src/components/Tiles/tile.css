@@ -1,0 +1,23 @@
+.tile {
+  width: var(--tile-width);
+  height: var(--tile-height);
+  border: 1px solid black;
+  margin: 1px 1px;
+  display: grid;
+  place-content: center;
+}
+.img {
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-size: 40px;
+}
+
+.tile .img:hover {
+    cursor: grab;
+}
+
+.tile .img:active {
+    cursor: grabbing;
+}
